@@ -1,6 +1,6 @@
 [package]
 name = "markcardstudio"
-version = "1.0.0"
+version = "1.0.1"
 description = "图文坊 WappKit - 抖音小红书图文批量生成器（基于 MarkCardStudio 二次开发）"
 authors = ["WappKit"]
 license = "GPL-3.0-only"

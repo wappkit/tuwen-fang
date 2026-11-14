@@ -38,7 +38,6 @@ let previouslyFocusedElement = null;
 const sections = computed(() => [
   { id: "general", label: t("settingsDialog.general"), icon: "settings" },
   { id: "about", label: t("settingsDialog.about"), icon: "info" },
-  { id: "support", label: t("settingsDialog.support"), icon: "heart-handshake" },
 ]);
 
 const activeSectionTitle = computed(() => {
@@ -419,41 +418,6 @@ onBeforeUnmount(() => {
               </dl>
             </div>
 
-            <!-- Support Section -->
-            <div v-else class="space-y-5">
-              <header>
-                <h3 class="text-sm font-bold text-slate-800 dark:text-slate-100">{{ t("settingsDialog.supportTitle") }}</h3>
-                <p class="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">{{ t("settingsDialog.supportDescription") }}</p>
-              </header>
-
-              <div class="grid grid-cols-[160px_minmax(0,1fr)] gap-4">
-                <section class="rounded-xl border border-slate-200/80 bg-slate-50/60 p-3 dark:border-slate-800 dark:bg-slate-800/50">
-                  <h4 class="text-xs font-bold text-slate-800 dark:text-slate-100">{{ t("settingsDialog.donation") }}</h4>
-                  <p class="mt-1 text-[11px] leading-4 text-slate-500 dark:text-slate-400">{{ t("settingsDialog.donationDescription") }}</p>
-                  <img
-                    src="/wx_sponsor.webp"
-                    :alt="t('settingsDialog.donationQrAlt')"
-                    width="828"
-                    height="828"
-                    class="mt-3 aspect-square w-full rounded-lg object-cover"
-                  />
-                </section>
-
-                <section class="flex min-w-0 flex-col rounded-xl border border-slate-200/80 bg-slate-50/60 p-3 dark:border-slate-800 dark:bg-slate-800/50">
-                  <h4 class="text-xs font-bold text-slate-800 dark:text-slate-100">{{ t("settingsDialog.wechatOfficialAccount") }}</h4>
-                  <p class="mt-1 text-[11px] leading-4 text-slate-500 dark:text-slate-400">{{ t("settingsDialog.wechatDescription") }}</p>
-                  <div class="mt-3 flex flex-1 items-center">
-                    <img
-                      src="/wx.webp"
-                      :alt="t('settingsDialog.wechatQrAlt')"
-                      width="2694"
-                      height="910"
-                      class="w-full rounded-lg object-contain"
-                    />
-                  </div>
-                </section>
-              </div>
-            </div>
           </main>
         </div>
       </section>

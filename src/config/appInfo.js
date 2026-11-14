@@ -1,6 +1,6 @@
 export const APP_INFO = {
   name: "图文坊 WappKit",
-  version: "1.0.0",
+  version: "1.0.1",
   license: "GNU GPL v3.0",
   author: {
     name: "WappKit",
