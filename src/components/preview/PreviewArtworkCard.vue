@@ -21,10 +21,10 @@ const props = defineProps({
   backgroundType: { type: String, default: "gradient" },
   backgroundValue: { type: String, default: "linear-gradient(135deg, #69eacb 0%, #eaccf8 48%, #6654f1 100%)" },
   showPageNumber: { type: Boolean, default: true },
-  showTopLeft: { type: Boolean, default: true },
-  showTopRight: { type: Boolean, default: true },
-  showBottomLeft: { type: Boolean, default: true },
-  showBottomRight: { type: Boolean, default: true },
+  showTopLeft: { type: Boolean, default: false },
+  showTopRight: { type: Boolean, default: false },
+  showBottomLeft: { type: Boolean, default: false },
+  showBottomRight: { type: Boolean, default: false },
   customFontFamily: { type: String, default: "" },
 });
 

@@ -13,6 +13,11 @@ defineProps({
     type: Array,
     required: true,
   },
+  // WappKit: 缩略图跟随文档的页眉开关，否则正文页四角干净、缩略图却冒出 @账号名
+  showTopLeft: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 defineEmits(["add-page", "select-page"]);
@@ -30,7 +35,7 @@ defineEmits(["add-page", "select-page"]);
       <!-- Thumbnail Card Box -->
       <div class="relative h-20 w-full overflow-hidden rounded-lg bg-[#fff7e9] dark:bg-slate-800/90 p-2 shadow-inner flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-bold text-amber-800 dark:text-amber-300 leading-tight block truncate">{{ page.kicker }}</span>
+          <span v-if="showTopLeft" class="text-[10px] font-bold text-amber-800 dark:text-amber-300 leading-tight block truncate">{{ page.kicker }}</span>
           <strong class="text-xs font-semibold text-slate-900 dark:text-slate-100 leading-tight block truncate mt-0.5">{{ page.title }}</strong>
         </div>
 

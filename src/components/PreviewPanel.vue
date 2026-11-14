@@ -197,6 +197,7 @@ onBeforeUnmount(() => {
     <PreviewStrip
       :active-page-index="activePageIndex"
       :pages="pages"
+      :show-top-left="showTopLeft"
       @add-page="$emit('add-page')"
       @select-page="$emit('select-page', $event)"
     />

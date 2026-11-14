@@ -76,7 +76,7 @@
 
 ## 安装
 
-到 [Releases](https://github.com/wappkit/tuwen-fang/releases) 下载 `图文坊_1.0.0_x64-setup.exe`，双击安装。
+到 [Releases](https://github.com/wappkit/tuwen-fang/releases) 下载 `tuwenfang_1.0.0_x64-setup.exe`，双击安装（安装后程序名为「图文坊」）。
 
 - 系统要求：Windows 10 1809 及以上 / Windows 11，x64
 - 安装包 7.7 MB，装完约 19 MB，不需要 .NET、不需要联网
