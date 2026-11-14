@@ -27,3 +27,9 @@ pnpm-debug.log*
 *.msi
 *.dmg
 *.AppImage
+
+# 更新签名私钥，绝不入库
+.secrets/
+*.key
+*.key.pub
+!src-tauri/icons/*
