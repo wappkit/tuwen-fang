@@ -48,7 +48,8 @@ export function useUpdater() {
     }
 
     if (isAutoCheck) {
-      const autoUpdateEnabled = localStorage.getItem("markcard_studio_auto_update_preference_v1") !== "false";
+      // WappKit: 只有用户显式开启过「自动检查更新」才允许联网，默认一律不请求。
+      const autoUpdateEnabled = localStorage.getItem("markcard_studio_auto_update_preference_v1") === "true";
       if (!autoUpdateEnabled) {
         return null;
       }

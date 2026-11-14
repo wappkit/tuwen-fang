@@ -1,8 +1,6 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
-import { isTauri } from "@tauri-apps/api/core";
-import { openUrl } from "@tauri-apps/plugin-opener";
 import { APP_INFO } from "../config/appInfo.js";
 import { useAppPreferences } from "../i18n/index.js";
 import { useUpdater } from "../composables/useUpdater.js";
@@ -67,13 +65,6 @@ const authorDetails = computed(() => [
   { label: t("settingsDialog.author"), value: APP_INFO.author.name },
   { label: t("settingsDialog.upstream"), value: APP_INFO.upstream.name },
 ].filter((item) => item.value));
-
-async function openDetailLink(event, href) {
-  if (!isTauri()) return;
-
-  event.preventDefault();
-  await openUrl(href);
-}
 
 function close() {
   isLanguageDropdownOpen.value = false;
@@ -400,20 +391,7 @@ onBeforeUnmount(() => {
                 </div>
                 <div v-for="detail in authorDetails" :key="detail.label" class="flex items-center justify-between gap-4 px-4 py-3 text-sm">
                   <dt class="text-slate-500 dark:text-slate-400">{{ detail.label }}</dt>
-                  <dd class="min-w-0 truncate text-slate-800 dark:text-slate-100 font-medium">
-                    <a
-                      v-if="detail.href"
-                      :href="detail.href"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="text-blue-600 underline decoration-blue-300 underline-offset-2 transition-colors hover:text-blue-700 dark:text-blue-400 dark:decoration-blue-700 dark:hover:text-blue-300"
-                      :title="detail.value"
-                      @click="openDetailLink($event, detail.href)"
-                    >
-                      {{ detail.value }}
-                    </a>
-                    <template v-else>{{ detail.value }}</template>
-                  </dd>
+                  <dd class="min-w-0 truncate text-slate-800 dark:text-slate-100 font-medium">{{ detail.value }}</dd>
                 </div>
               </dl>
             </div>

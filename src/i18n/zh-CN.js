@@ -32,7 +32,7 @@ export default {
     light: "浅色",
     dark: "深色",
     autoUpdate: "开机自动检查更新",
-    autoUpdateDescription: "开启后，应用启动时将自动在后台检测新版本（断网或超时将静默忽略）。",
+    autoUpdateDescription: "默认关闭。开启后应用启动时会连接发布页检测新版本，断网或超时静默忽略。",
     appInformation: "应用信息",
     version: "版本",
     checkUpdate: "检查更新",

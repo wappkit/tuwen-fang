@@ -41,7 +41,8 @@ function writePreference(key, value) {
 
 const storedLanguagePreference = readPreference(LANGUAGE_PREFERENCE_KEY, "system");
 const storedAppearancePreference = readPreference(APPEARANCE_PREFERENCE_KEY, "system");
-const storedAutoUpdatePreference = readPreference(AUTO_UPDATE_PREFERENCE_KEY, "true");
+// WappKit: 默认关闭自动检查更新。产品对外承诺「完全离线」，启动阶段不得发起任何网络请求。
+const storedAutoUpdatePreference = readPreference(AUTO_UPDATE_PREFERENCE_KEY, "false");
 const languagePreference = ref(
   [...supportedLocales, "system"].includes(storedLanguagePreference) ? storedLanguagePreference : "system",
 );

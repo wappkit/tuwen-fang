@@ -32,7 +32,7 @@ export default {
     light: "Light",
     dark: "Dark",
     autoUpdate: "Check for updates on startup",
-    autoUpdateDescription: "Automatically check for new versions in the background when the application starts (silently ignored on timeout).",
+    autoUpdateDescription: "Off by default. When enabled, the app contacts the release page at startup to check for new versions (silently ignored on timeout).",
     appInformation: "Application information",
     version: "Version",
     checkUpdate: "Check for Updates",
