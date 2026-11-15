@@ -49,6 +49,7 @@ export default {
     license: "License",
     author: "Author",
     upstream: "Based on",
+    debutNotice: "First released on 52pojie.cn. Please credit the source when reposting.",
     github: "GitHub",
     website: "Website",
     email: "Email",

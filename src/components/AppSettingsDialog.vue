@@ -394,6 +394,8 @@ onBeforeUnmount(() => {
                   <dd class="min-w-0 truncate text-slate-800 dark:text-slate-100 font-medium">{{ detail.value }}</dd>
                 </div>
               </dl>
+
+              <p class="rounded-lg border border-slate-200/70 bg-slate-50/60 px-3 py-2.5 text-xs leading-relaxed text-slate-500 dark:border-slate-800 dark:bg-slate-800/40 dark:text-slate-400">{{ t("settingsDialog.debutNotice") }}</p>
             </div>
 
           </main>

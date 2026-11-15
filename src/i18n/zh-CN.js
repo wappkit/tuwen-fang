@@ -49,6 +49,7 @@ export default {
     license: "许可证",
     author: "作者",
     upstream: "上游项目",
+    debutNotice: "本软件首发于 吾爱破解论坛 52pojie.cn，转载请注明出处。",
     github: "GitHub",
     website: "网站",
     email: "邮箱",
